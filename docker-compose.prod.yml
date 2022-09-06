@@ -40,8 +40,8 @@ services:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
       # Mount source-code for development
       - ./:/app
-      - ./docker/php/custom-config.ini:/usr/local/etc/php/conf.d/custom-config.ini
-      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+#      - ./docker/php/custom-config.ini:/usr/local/etc/php/conf.d/custom-config.ini
+#      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy"
