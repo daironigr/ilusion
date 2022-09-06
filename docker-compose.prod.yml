@@ -1,0 +1,55 @@
+version: '3.2'
+
+services:
+#  api:
+#    #    depends_on:
+#    #      - pgsql
+#    container_name: apiilusion
+#    build:
+#      context: .
+#      dockerfile: ./api/Dockerfile
+#    expose:
+#      - 80
+#    restart: always
+#    volumes:
+#      # Re-use local composer cache via host-volume
+#      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+#      # Mount source-code for development
+#      - ./:/app
+#      - ./docker/php/custom-config.ini:/usr/local/etc/php/conf.d/custom-config.ini
+#      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.docker.network=proxy"
+#      - "traefik.http.routers.apihits-secure.entrypoints=websecure"
+#      - "traefik.http.routers.apihits-secure.rule=Host(`apihits.rubrum.eu`)"
+
+
+  backend:
+    #    depends_on:
+    #      - pgsql
+    container_name: backendilusion
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    expose:
+      - 80
+    restart: always
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+      - ./docker/php/custom-config.ini:/usr/local/etc/php/conf.d/custom-config.ini
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.backendhits-secure.entrypoints=websecure"
+      - "traefik.http.routers.backendhits-secure.rule=Host(`ilusion.rubrum.eu`)"
+
+
+networks:
+  default:
+    external:
+      name: proxy
