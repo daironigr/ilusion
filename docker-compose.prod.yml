@@ -45,8 +45,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy"
-      - "traefik.http.routers.backendhits-secure.entrypoints=websecure"
-      - "traefik.http.routers.backendhits-secure.rule=Host(`ilusion.rubrum.eu`)"
+      - "traefik.http.routers.backendilusion-secure.entrypoints=websecure"
+      - "traefik.http.routers.backendilusion-secure.rule=Host(`ilusion.rubrum.eu`)"
 
 
 networks:
