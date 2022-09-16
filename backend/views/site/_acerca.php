@@ -8,7 +8,7 @@ use yii\bootstrap5\Html; ?>
                 Yii::getAlias('@web/images/personaje.png'),
                 [
                     'class' => 'w-75',
-                    'data-aos' => 'fade-right'
+                    'data-entrance' => 'from-left'
                 ]
             ) ?>
         </div>
