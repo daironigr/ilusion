@@ -47,6 +47,7 @@ services:
       - "traefik.docker.network=proxy"
       - "traefik.http.routers.backendstudio-secure.entrypoints=websecure"
       - "traefik.http.routers.backendstudio-secure.rule=Host(`studio.rubrum.eu`)"
+      - "traefik.http.routers.backendstudio-secure.service=backendstudio"
 
 
 networks:
