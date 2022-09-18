@@ -3,17 +3,17 @@
 use yii\bootstrap5\Html; ?>
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-sm-5">
             <?= Html::img(
-                Yii::getAlias('@web/images/personaje.png'),
+                Yii::getAlias('@web/images/personaje_studio.png'),
                 [
                     'class' => 'w-75',
                     'data-entrance' => 'from-left'
                 ]
             ) ?>
         </div>
-        <div class="col align-self-center" data-aos="fade-left">
-            <h2>ILUSION</h2>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-center mt-5" data-aos="fade-left">
+            <h2>Mas Bella Studio</h2>
                 <p style="text-align: justify">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and

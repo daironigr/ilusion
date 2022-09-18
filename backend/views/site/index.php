@@ -6,17 +6,17 @@ use yii\bootstrap5\Html;
 
 $this->title = 'Ilusion';
 ?>
-<header class="masthead" style="min-height: 100vh !important;">
+<header class="masthead-studio" style="min-height: 100vh !important;">
     <div class="container d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase"><?= "ILUSIÓN" ?></h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5"><?= "Peluquería y estética unisex" ?></h2>
+                <h1 class="mx-auto my-0 text-uppercase"><?= "MAS BELLA STUDIO" ?></h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5"><?= "Estudio fotográfico" ?></h2>
             </div>
         </div>
     </div>
     <div class="hero-button text-center w-100">
-    <button class="" style="z-index: 100 !important;" href="#about">Pide cita</button>
+    <button class="" style="z-index: 100 !important;" href="#about">Reserva</button>
     </div>
 </header>
 <!--<div class="hero d-flex align-items-center justify-content-center">-->
