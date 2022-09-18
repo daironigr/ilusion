@@ -28,7 +28,7 @@ services:
   backend:
     #    depends_on:
     #      - pgsql
-    container_name: backendilusion
+    container_name: backendstudio
     build:
       context: .
       dockerfile: ./backend/Dockerfile
@@ -45,8 +45,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=proxy"
-      - "traefik.http.routers.backendilusion-secure.entrypoints=websecure"
-      - "traefik.http.routers.backendilusion-secure.rule=Host(`ilusion.rubrum.eu`)"
+      - "traefik.http.routers.backendstudio-secure.entrypoints=websecure"
+      - "traefik.http.routers.backendstudio-secure.rule=Host(`studio.rubrum.eu`)"
 
 
 networks:
